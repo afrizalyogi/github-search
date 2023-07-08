@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <main className="py-5">
-      <section id="search" className="container w-1/2 mx-auto mb-12">
+      <section id="search" className="container w-4/5 md:w-1/2 mx-auto mb-12">
         <input
           type="text"
           placeholder="Search Github User"
@@ -33,8 +33,11 @@ export default function Home() {
         />
       </section>
       <UserList query={query}></UserList>
-      <section id="back-to-top" className="container w-1/2 mx-auto text-center">
-        <Link href="#search" className="underline">
+      <section
+        id="back-to-top"
+        className="container w-4/5 md:w-1/2 mx-auto text-center"
+      >
+        <Link href="#search" className="underline text-sm">
           End of The Line - Back to Top
         </Link>
       </section>

@@ -39,8 +39,6 @@ body {
   border: 1px solid var(--black-border);
   color: var(--white-secondary);
   background-color: var(--blue-secondary);
-  width: 110px;
-  padding: 6px;
 }
 
 .btn-explore:hover {
