@@ -2,16 +2,12 @@
 import useSWR from "swr"
 import UserData from "./userData"
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json())
-
 interface UserListProps {
   query: string
 }
-interface UserDataProps {
-  login: string
-}
 
 export default function UserList({ query }: UserListProps) {
+  const fetcher = (url: string) => fetch(url).then((res) => res.json())
   const { data: dataList, error } = useSWR(
     `https://api.github.com/search/users?q=${query}`,
     fetcher

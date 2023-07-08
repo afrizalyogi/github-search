@@ -7,6 +7,10 @@ import {
 import { useEffect, useState } from "react"
 import useSWR from "swr"
 
+interface UserDataProps {
+  login: string
+}
+
 export default function UserData({ login }: UserDataProps) {
   const [dataDetail, setDataDetail] = useState([])
 
@@ -17,6 +21,12 @@ export default function UserData({ login }: UserDataProps) {
         setDataDetail(data)
       })
   }, [])
+
+  // const fetcher = (url: string) => fetch(url).then((res) => res.json())
+  // const { data: dataDetail } = useSWR(
+  //   `https://api.github.com/users/${login}`,
+  //   fetcher
+  // )
 
   console.log(dataDetail)
   return (
