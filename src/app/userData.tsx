@@ -18,7 +18,6 @@ export default function UserData({ login }: UserDataProps) {
     login: "",
     bio: "",
     location: "",
-    html_url: "",
     public_repos: 0,
     followers: 0,
   })
@@ -74,7 +73,7 @@ export default function UserData({ login }: UserDataProps) {
         </div>
         <div className="flex justify-end">
           <Link
-            href={dataDetail.html_url}
+            href={`https://github.com/${dataDetail.login}`}
             target="_blank"
             className="w-full xl:w-28"
           >
