@@ -5,6 +5,7 @@ import {
   faUserGroup,
 } from "@fortawesome/free-solid-svg-icons"
 import { useEffect, useState } from "react"
+import Link from "next/link"
 
 interface UserDataProps {
   login: string
@@ -17,6 +18,7 @@ export default function UserData({ login }: UserDataProps) {
     login: "",
     bio: "",
     location: "",
+    html_url: "",
     public_repos: 0,
     followers: 0,
   })
@@ -71,9 +73,15 @@ export default function UserData({ login }: UserDataProps) {
           </div>
         </div>
         <div className="flex justify-end">
-          <button className="btn-explore rounded-xl w-full xl:w-28 h-10 justify-end">
-            Explore
-          </button>
+          <Link
+            href={dataDetail.html_url}
+            target="_blank"
+            className="w-full xl:w-28"
+          >
+            <button className="btn-explore rounded-xl w-full xl:w-28 h-10 justify-end">
+              Explore
+            </button>
+          </Link>
         </div>
       </div>
     </div>
