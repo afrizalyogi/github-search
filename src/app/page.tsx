@@ -1,4 +1,10 @@
 "use client"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faLocationDot,
+  faBook,
+  faUserGroup,
+} from "@fortawesome/free-solid-svg-icons"
 import { useState } from "react"
 import Link from "next/link"
 import UserList from "./userList"
