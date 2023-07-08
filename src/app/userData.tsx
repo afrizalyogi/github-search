@@ -33,7 +33,7 @@ export default function UserData({ login }: UserDataProps) {
   return (
     <div className="user-card">
       <div className="grid xl:grid-flow-col gap-6">
-        <div className="grid md:grid-flow-col">
+        <div className="grid md:grid-flow-col gap-6">
           <div>
             <img
               src={dataDetail.avatar_url}
