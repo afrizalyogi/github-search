@@ -18,7 +18,7 @@ export default function UserList({ query }: UserListProps) {
   return (
     <section
       id="user-list"
-      className="container w-4/5 md:w-1/2 py-14 mx-auto mb-10"
+      className="container w-4/5 md:w-1/2 pt-14 mx-auto mb-10"
     >
       {isLoading && <div className="text-center">Loading...</div>}
       {dataList &&

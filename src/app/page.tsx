@@ -33,7 +33,7 @@ export default function Home() {
       <UserList query={query}></UserList>
       <section
         id="back-to-top"
-        className="container w-4/5 md:w-1/2 mx-auto text-center"
+        className="container w-4/5 md:w-1/2 pb-12 mx-auto text-center"
       >
         <Link href="#search" className="underline text-sm">
           End of The Line - Back to Top
