@@ -50,7 +50,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Afrizal Yogi
+            by <b>Afrizal Yogi</b>
           </Link>
         </div>
       </footer>
