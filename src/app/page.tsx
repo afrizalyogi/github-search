@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <main className="py-5">
-      <section id="search" className="container w-1/2 mx-auto mb-10">
+      <section id="search" className="container w-1/2 mx-auto mb-12">
         <input
           type="text"
           placeholder="Search Github User"
