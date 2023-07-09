@@ -5,7 +5,7 @@ import { useState } from "react"
 import Link from "next/link"
 import UserList from "./userList"
 import { ThemeProvider } from "next-themes"
-import ChangeTheme, { ChangeThemeSM } from "./changeTheme"
+import ChangeTheme, { ChangeThemeSM } from "./theme"
 
 export default function Home() {
   const [query, setQuery] = useState("")
