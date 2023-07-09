@@ -9,12 +9,17 @@ import ChangeTheme, { ChangeThemeSM } from "./theme"
 
 export default function Home() {
   const [query, setQuery] = useState("")
+  const [inputValue, setInputValue] = useState("")
 
   const onSearch = (input: any) => {
+    setQuery(input)
+  }
+
+  const handleKeyDown = (input: any) => {
     if (input.keyCode === 13) {
       input.preventDefault()
       const query = input.currentTarget.value
-      setQuery(query)
+      onSearch(query)
     }
   }
 
@@ -39,17 +44,22 @@ export default function Home() {
             border-2 border-black-secondary hover:border-black-primary focus:border-black-primary  dark:border-white-secondary dark:hover:border-white dark:focus:border-white
             color-black-secondary focus:color-black dark:color-white-secondary dark:focus:color-white
             placeholder:text-black-secondary hover:placeholder:text-black dark:placeholder:text-white-secondary hover:placeholder:text-white"
-              onKeyDown={onSearch}
+              onKeyDown={handleKeyDown}
+              onChange={(e) => setInputValue(e.target.value)}
               onFocus={(e) =>
                 (e.target.placeholder = "Type and press enter...")
               }
               onBlur={(e) => (e.target.placeholder = "Search Github User")}
             />
-            <button className="hidden sm:block bg-white-primary dark:bg-blue-background w-full sm:w-16 rounded-full mt-2 sm:mt-0 sm:ms-2 border-black-secondary dark:border-white-secondary border-2 p-2 sm:p-4 hover:bg-white-secondary dark:hover:bg-blue-secondary">
+            <button
+              onClick={() => onSearch(inputValue)}
+              className="hidden sm:block bg-white-primary dark:bg-blue-background w-full sm:w-16 rounded-full mt-2 sm:mt-0 sm:ms-2 border-black-secondary dark:border-white-secondary border-2 p-2 sm:p-4 hover:bg-white-secondary dark:hover:bg-blue-secondary"
+            >
               <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
             </button>
           </div>
         </section>
+
         <UserList query={query}></UserList>
 
         <footer
