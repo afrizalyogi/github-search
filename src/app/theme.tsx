@@ -18,20 +18,20 @@ export default function ChangeTheme() {
 
   return (
     <div className="hidden sm:flex justify-center">
-      {theme === "light" ? (
+      {theme === "dark" ? (
         <button
           className="bg-blue-background hover:bg-blue-secondary w-full sm:w-16 rounded-full mb-2 sm:mb-0 sm:me-2 border-white-secondary border-2 p-2 sm:p-4"
-          onClick={() => setTheme("dark")}
+          onClick={() => setTheme("light")}
         >
           {" "}
-          <FontAwesomeIcon icon={faMoon}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faSun}></FontAwesomeIcon>
         </button>
       ) : (
         <button
           className="bg-white-primary w-full sm:w-16 rounded-full mb-2 sm:mb-0 sm:me-2 border-black-secondary border-2 p-2 sm:p-4 hover:bg-white-secondary"
-          onClick={() => setTheme("light")}
+          onClick={() => setTheme("dark")}
         >
-          <FontAwesomeIcon icon={faSun}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faMoon}></FontAwesomeIcon>
         </button>
       )}
     </div>
@@ -52,20 +52,20 @@ export function ChangeThemeSM() {
 
   return (
     <div className="flex sm:hidden justify-center">
-      {theme === "light" ? (
+      {theme === "dark" ? (
         <button
           className=" bg-blue-background hover:bg-blue-secondary w-1/2 sm:w-16 rounded-full mb-4 sm:mb-0 sm:me-2 border-white-secondary border-2 p-2 sm:p-4"
-          onClick={() => setTheme("dark")}
+          onClick={() => setTheme("light")}
         >
           {" "}
-          <FontAwesomeIcon icon={faMoon}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faSun}></FontAwesomeIcon>
         </button>
       ) : (
         <button
           className="bg-white-primary w-1/2 sm:w-16 rounded-full mb-4 sm:mb-0 sm:me-2 border-black-secondary border-2 p-2 sm:p-4 hover:bg-white-secondary"
-          onClick={() => setTheme("light")}
+          onClick={() => setTheme("dark")}
         >
-          <FontAwesomeIcon icon={faSun}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faMoon}></FontAwesomeIcon>
         </button>
       )}
     </div>
