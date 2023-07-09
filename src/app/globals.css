@@ -2,67 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --blue-primary: #3a8bff;
-  --blue-secondary: #21262d;
-  --blue-secondary-light: #2c3138;
-  --black-border: #555;
-  --background: #0d1117;
-  --white-primary: #fff;
-  --white-secondary: #cacaca;
-}
-
-body {
-  color: var(--white-primary);
-  background: var(--background);
-}
-
-footer,
-#search {
-  background-color: var(--background);
-}
-
-#search input {
-  font-size: 14px;
-  text-align: center;
-  border: 1px solid var(--black-border);
-  background: var(--background);
-  color: var(--white-secondary);
-}
-
-#search input:hover {
-  border: 1px solid var(--white-primary);
-  color: var(--white-primary);
-}
-
-#search input:focus {
-  text-align: left;
-}
-
 .btn-explore {
-  font-size: 12px;
-  border: 1px solid var(--black-border);
-  color: var(--white-secondary);
-  background-color: var(--blue-secondary);
+  color: #cacaca;
 }
 
 .btn-explore:hover {
-  border: 1px solid var(--white-primary);
-  color: var(--white-primary);
-  background-color: var(--blue-secondary-light);
-}
-
-.full-name {
-  color: var(--blue-primary);
-}
-
-.user-card {
-  border: 1px solid var(--black-border);
-  border-radius: 24px;
-  padding: 24px;
-  margin-bottom: 24px;
-}
-
-.user-card:hover {
-  border-color: var(--white-secondary);
+  color: #fff;
 }

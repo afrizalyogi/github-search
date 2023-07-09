@@ -15,7 +15,6 @@ export default function UserList({ query }: UserListProps) {
   )
 
   const isLoading = !dataList && !error
-  console.log(dataList)
 
   return (
     <section
@@ -24,12 +23,12 @@ export default function UserList({ query }: UserListProps) {
     >
       {dataList === undefined ||
         (dataList.message == "Validation Failed" && (
-          <div className="container text-center h-screen flex items-center">
+          <div className="container text-center pt-10 md:pt-0 md:h-screen flex items-center">
             <div className="h-1/2">
               <h1 className="sm:text-2xl xl:text-3xl font-bold mb-3">
                 Discover and Expand Your GitHub Network!
               </h1>
-              <p className="font-thin text-sm sm:text-base">
+              <p className="font-light text-sm sm:text-base">
                 Welcome to our platform designed to help you find and connect
                 with fellow GitHub users. Whether you're a developer, a
                 collaborator, or simply interested in exploring the vibrant
