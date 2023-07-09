@@ -31,14 +31,6 @@ export default function Home() {
         </div>
       </section>
       <UserList query={query}></UserList>
-      <section
-        id="back-to-top"
-        className="container w-4/5 md:w-1/2 pb-12 mx-auto text-center"
-      >
-        <Link href="#search" className="underline text-sm">
-          End of The Line - Back to Top
-        </Link>
-      </section>
       <footer className="w-full py-5 fixed bottom-0 left-0 right-0">
         <div className="text-center mx-auto">
           {" "}
