@@ -23,7 +23,7 @@ export default function UserList({ query }: UserListProps) {
     >
       {dataList === undefined ||
         (dataList.message == "Validation Failed" && (
-          <div className="container text-center pt-10 md:pt-0 md:h-screen flex items-center">
+          <div className="container text-center md:h-screen flex items-center">
             <div className="h-1/2">
               <h1 className="sm:text-2xl xl:text-3xl font-bold mb-3">
                 Discover and Expand Your GitHub Network!
